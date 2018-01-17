@@ -1,0 +1,44 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Plugin display name here</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+  <depends>com.intellij.modules.xml</depends>
+  <depends>com.intellij.modules.lang</depends>
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <applicationConfigurable instance="github.threefish.language.project.ToolConfigurable"/>
+    <applicationService serviceInterface="github.threefish.language.project.ToolCfiguration"
+                        serviceImplementation="github.threefish.language.project.ToolCfiguration"/>
+    <fileTypeFactory implementation="github.threefish.language.beetl.BeetlFileTypeFactory"/>
+    <!--语言扩展点-注解者 -->
+    <annotator language="HTML" implementationClass="github.threefish.language.beetl.annotator.BeetlAnnotator"/>
+    <!--文件有错误，在项目视图中该文件也被加下划线-->
+    <problemFileHighlightFilter implementation="github.threefish.language.beetl.BeetlFileHighlightFilter"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
