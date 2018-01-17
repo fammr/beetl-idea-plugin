@@ -1,17 +1,17 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
+  <id>github.threefish.language.beetl.id</id>
   <name>Plugin display name here</name>
   <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="306955302@qq.com" url="https://github.com/threefish/beetl-idea-plugin">306955302@qq.com</vendor>
 
   <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+    1 针对模版文件进行验证是否正确<br>
+    2 错误定位（定位不精确，主要是模版文件会被antlr解析为source）<br>
     ]]></description>
 
   <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+      1 针对模版文件进行验证是否正确<br>
+      2 错误定位（定位不精确，主要是模版文件会被antlr解析为source）<br>
     ]]>
   </change-notes>
   <depends>com.intellij.modules.xml</depends>
